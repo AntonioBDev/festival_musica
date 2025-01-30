@@ -1,3 +1,5 @@
+@use'variables' as v;
 body{
-    background-color: rgb(217, 255, 0);
- }
+    font-family: v.$fuente_principal;
+    background-color: v.$negro;
+}
