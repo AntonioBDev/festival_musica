@@ -13,18 +13,5 @@ export function css(done){
 }
 
 export function dev(){
-    watch('src/scss/app.scss',css)
-}
-
-
-export function hola(done){
-//  const texto = document.createElement("H1");
-//  const body = document.querySelector("body");
-//  texto.textContent = "Hola mundo";
-//  texto.classList.add("color-blanco")
-//  body.appendChild(texto)
-    console.log("hola")
-
-    done();// indicacion de que la tarea a terminado 
- 
+    watch('src/scss/**/*.scss',css)
 }
