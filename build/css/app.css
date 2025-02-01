@@ -323,8 +323,8 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #FFFFFF;
-  background-color: #000000;
+  color: #000000;
+  background-color: #FFFFFF;
 }
 
 p {
@@ -413,4 +413,45 @@ body > section {
 }
 .navegacion-principal .enlace:hover {
   color: #fdda00;
+}
+
+.video {
+  position: relative;
+  min-height: 30rem;
+  max-height: 65rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, rgba(117, 47, 151, 0.6), rgba(56.7272727273, 22.7878787879, 73.2121212121, 0.9));
+  display: flex;
+  align-items: center;
+}
+.video video {
+  display: block;
+  width: auto;
+}
+@media (min-width: 768px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.contenido-video {
+  z-index: 10;
+}
+.contenido-video h2 {
+  color: #FFFFFF;
+  font-size: 7rem;
+  margin: 0;
+}
+.contenido-video p {
+  color: #FFFFFF;
+  background-color: #F53756;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0;
+  display: inline-block;
+  padding: 1rem 2rem;
 }
