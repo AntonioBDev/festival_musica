@@ -325,6 +325,7 @@ body {
   font-style: normal;
   color: #000000;
   background-color: #FFFFFF;
+  font-size: 2rem;
 }
 
 p {
@@ -424,7 +425,7 @@ body > section {
 .video .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(270deg, rgba(117, 47, 151, 0.6), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(270deg, rgba(117, 47, 151, 0.6), rgba(56.7272727273, 22.7878787879, 73.2121212121, 0.8));
   display: flex;
   align-items: center;
 }
@@ -460,4 +461,95 @@ body > section {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.contenido-festival {
+  margin-top: 5rem;
+}
+.contenido-festival h2 {
+  margin-bottom: 2rem;
+}
+.contenido-festival .fecha {
+  color: #4CB8B3;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .contenido-festival {
+    margin-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .contenido-festival {
+    margin-top: 5rem;
+  }
+}
+
+.lineup {
+  background-color: #F53756;
+}
+.lineup h3, .lineup .dia {
+  text-align: center;
+  color: #FFFFFF;
+}
+.lineup .dia {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.escenarios-contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.escenario {
+  padding-top: 2rem;
+}
+.escenario .nombre-escenario {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.calendario {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-amarillo {
+  background-color: #fdda00;
+}
+.bg-amarillo li:nth-child(odd) {
+  background-color: rgb(255, 226.5019762846, 49);
+}
+
+.bg-verde {
+  background-color: #4CB8B3;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: rgb(112.516, 198.484, 194.504);
 }
