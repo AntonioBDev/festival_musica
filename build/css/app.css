@@ -553,3 +553,89 @@ body > section {
 .bg-verde li:nth-child(odd) {
   background-color: rgb(112.516, 198.484, 194.504);
 }
+
+.contenido-boletos {
+  background-color: #4CB8B3;
+}
+.contenido-boletos h3 {
+  color: #FFFFFF;
+  text-align: center;
+}
+.contenido-boletos .boletos {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .contenido-boletos .boletos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.pase {
+  transition: transform 0.2s ease-in-out;
+}
+.pase:hover {
+  transform: scale(1.1);
+}
+.pase-nombre {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-align: center;
+}
+.pase-header, .pase-footer {
+  padding: 0.5rem;
+}
+.pase-header p, .pase-footer p {
+  text-align: center;
+  margin: 0;
+  color: #FFFFFF;
+}
+.pase-header {
+  background-color: #F53756;
+}
+.pase-header p {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  padding: 1rem 0;
+}
+.pase-body {
+  background-color: #FFFFFF;
+}
+.pase-body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.pase-body li {
+  padding: 2rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pase-footer {
+  background-color: #FFFFFF;
+  padding: 3rem;
+}
+.pase-footer p {
+  background-color: #752F97;
+  font-size: 2.8rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.pase-footer p:hover {
+  background-color: rgb(82.6730769231, 47, 100);
+}
+
+.footer {
+  background-color: #F53756;
+  padding: 2rem 0;
+}
+.footer p {
+  margin: 0;
+  color: #FFFFFF;
+  text-align: center;
+}/*# sourceMappingURL=app.css.map */
