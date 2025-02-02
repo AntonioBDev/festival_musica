@@ -1,4 +1,5 @@
 @use 'base/mixins' as m;
+@use 'sass:color';
 @use 'base/variables' as v;
 
 .video{   
@@ -9,14 +10,15 @@
     .overlay{
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-            270deg,
-            rgba(v.$morado, 60%),
-            rgba(darken(v.$morado, 20%), 90%)
-        );
+       background: linear-gradient(
+        270deg,
+        rgba(v.$morado, 60%),
+        rgba(v.$negro, 80%)
+       );
         display: flex;
         align-items: center;
     }
+    
     video{
         display: block;
         width: auto;
