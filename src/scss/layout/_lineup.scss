@@ -34,6 +34,10 @@
 
 .calendario{
     @include m.resetear-lista;
+    margin-bottom: 1rem;
+    @include m.tablet{
+        margin-bottom: 0;
+    }
     li{
         padding: 2.5rem;
         font-weight: 700;
