@@ -1,6 +1,23 @@
 document.addEventListener('DOMContentLoaded', function(){
     crearGaleria();
+    navegacionFija();
+    resaltarEnlace();
 });
+
+function navegacionFija(){
+    const header = document.querySelector('.header');
+    const sobreFestival = document.querySelector('.sobre-festival');
+
+    document.addEventListener('scroll', function(){
+        if(sobreFestival.getBoundingClientRect().bottom < 1){
+            header.classList.add('fixed');
+        }else{
+            header.classList.remove('fixed');
+        }
+    });
+
+    
+}
 
 function crearGaleria(){
     const galeria = document.querySelector('.galeria-imagenes');
@@ -21,7 +38,7 @@ function crearGaleria(){
 }
 
 function mostrarImagen(i){
-     const modal = document.createElement('DIV');
+    const modal = document.createElement('DIV');
     const body = document.querySelector('body');
     const imagen = document.createElement('IMG'); 
     const cerrarModalBtn = document.createElement('BUTTON');
@@ -53,3 +70,16 @@ function cerrarModal(){
     },500)
 }
 
+function resaltarEnlace(){
+    document.addEventListener('scroll', function(){
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navegacion-principal a')
+
+        sections.forEach(section =>{
+            const sectionTop = section.offsetTop // propiedad: retorna la distancia del elemento actual respecto al borde superior del nodo 
+            const sectionHeight = section.clientHeight//Propiedad: devuelve la altura de un elemento en píxeles, incluyendo el padding pero no las barras horizontales, el borde o el margen.
+
+            console.log(sectionTop)
+        })
+    })
+}
