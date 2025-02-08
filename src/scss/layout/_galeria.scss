@@ -35,12 +35,20 @@
     place-items: center;
     animation: fadeIn ease-in 0.5s;
 
+
     &.fade-out{
         animation: fadeOut ease-in 0.5s;
     }
 
     img{
         max-width: 100rem;
+        @include m.desktop{
+            max-width: 78rem;
+        }
+
+        @include m.desktopXL{
+            max-width: 100rem;
+        }
     }
 
     .btn-cerrar{
