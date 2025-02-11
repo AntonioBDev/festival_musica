@@ -11,7 +11,6 @@
             left: 0;
             width: 100%;
             box-shadow: .1rem .2rem .3rem #333;
-            z-index: 1;
         }
     }
 
@@ -32,6 +31,10 @@
             margin: 0;
         }
     }
+
+    &.zindex{
+        z-index: 1;
+    }
 }
 
 .navegacion-principal{
@@ -42,11 +45,11 @@
     @include m.tablet{
         flex-direction: row;
     }
-    .enlace{
+    a{
         color: v.$blanco;
         font-size: 2.4rem;
-
-        &:hover{
+        &:hover, 
+        &.active{
             color: v.$amarillo;
         }
     }

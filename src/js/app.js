@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
     crearGaleria();
     navegacionFija();
     resaltarEnlace();
+    scrollNav();
 });
 
 function navegacionFija(){
@@ -75,11 +76,40 @@ function resaltarEnlace(){
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.navegacion-principal a')
 
+        let actual = '';
         sections.forEach(section =>{
             const sectionTop = section.offsetTop // propiedad: retorna la distancia del elemento actual respecto al borde superior del nodo 
             const sectionHeight = section.clientHeight//Propiedad: devuelve la altura de un elemento en píxeles, incluyendo el padding pero no las barras horizontales, el borde o el margen.
+            if(window.scrollY >= (sectionTop - sectionHeight / 3)){
+                actual = section.id;
+            }
+        })
 
-            console.log(sectionTop)
+        navLinks.forEach(link => {
+            link.classList.remove('active')
+            if(link.getAttribute('href') === '#' + actual){
+                const header = document.querySelector('.header');
+
+                link.classList.add('active');
+                if(link.getAttribute('href') === '#boletos'){
+                    header.classList.add('zindex');
+                }else{
+                    header.classList.remove('zindex');
+                }
+            }
         })
     })
+}
+
+function scrollNav(){
+    const navlinks = document.querySelectorAll('.navegacion-principal a');
+     
+    navlinks.forEach(link => {
+        link.addEventListener('click', e =>{
+            e.preventDefault();
+            const sectionScroll = e.target.getAttribute('href');
+            const section = document.querySelector(sectionScroll);
+            section.scrollIntoView({behavior: 'smooth'});
+        })
+    });
 }

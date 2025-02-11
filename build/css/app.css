@@ -386,7 +386,6 @@ body > section {
     left: 0;
     width: 100%;
     box-shadow: 0.1rem 0.2rem 0.3rem #333;
-    z-index: 1;
   }
 }
 .header .contenido-header {
@@ -409,6 +408,9 @@ body > section {
     margin: 0;
   }
 }
+.header.zindex {
+  z-index: 1;
+}
 
 .navegacion-principal {
   display: flex;
@@ -421,11 +423,11 @@ body > section {
     flex-direction: row;
   }
 }
-.navegacion-principal .enlace {
+.navegacion-principal a {
   color: #FFFFFF;
   font-size: 2.4rem;
 }
-.navegacion-principal .enlace:hover {
+.navegacion-principal a:hover, .navegacion-principal a.active {
   color: #fdda00;
 }
 
